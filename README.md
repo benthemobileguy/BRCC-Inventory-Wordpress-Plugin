@@ -1,6 +1,6 @@
 # BRCC Inventory Tracker WordPress Plugin
 
-**Contributors:** Ben, Bright, Roo
+**Contributors:** Ben
 **Tags:** woocommerce, inventory, square, eventbrite, ecommerce, sync, tickets, sales, reporting, mapping, automation
 **Requires at least:** 5.0
 **Tested up to:** 6.4
