@@ -1,0 +1,478 @@
+/**
+ * BRCC Inventory Tracker Admin Styles
+ */
+
+/* General styles */
+.brcc-wrap {
+    margin: 20px 0;
+}
+
+/* Dashboard widgets */
+.brcc-dashboard-widgets {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px -10px;
+}
+
+.brcc-widget {
+    flex: 1 1 450px;
+    margin: 0 10px 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.brcc-widget h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #23282d;
+    font-size: 1.3em;
+}
+
+.brcc-full-width {
+    width: 100% !important;
+    flex-basis: 100% !important;
+}
+
+/* Period summary styles */
+.brcc-period-summary {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+    border: 1px solid #e5e5e5;
+}
+
+.brcc-period-summary h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #23282d;
+}
+
+.brcc-period-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+
+.brcc-period-summary-table th,
+.brcc-period-summary-table td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.brcc-period-summary-table th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    color: #23282d;
+}
+
+/* Sales tables */
+.brcc-sales-table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.brcc-sales-table,
+.brcc-event-sales-table,
+.brcc-sales-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #e5e5e5;
+}
+
+.brcc-sales-table th,
+.brcc-event-sales-table th,
+.brcc-sales-summary-table th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #e5e5e5;
+    color: #23282d; /* Uniform color for all headers */
+}
+
+.brcc-sales-table td,
+.brcc-event-sales-table td,
+.brcc-sales-summary-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+}
+
+/* Align numeric values to the right */
+.brcc-sales-table th:nth-child(4),
+.brcc-sales-table th:nth-child(5),
+.brcc-sales-table th:nth-child(6),
+.brcc-sales-table td:nth-child(4),
+.brcc-sales-table td:nth-child(5),
+.brcc-sales-table td:nth-child(6),
+.brcc-event-sales-table th:nth-child(3),
+.brcc-event-sales-table td:nth-child(3) {
+    text-align: center;
+}
+
+/* Alternating row styles */
+.brcc-sales-table tbody tr:nth-child(even),
+.brcc-event-sales-table tbody tr:nth-child(even):not(.brcc-total-row),
+.brcc-sales-summary-table tbody tr:nth-child(even):not(.brcc-date-row) {
+    background-color: #f9f9f9;
+}
+
+.brcc-sales-table tr:hover,
+.brcc-event-sales-table tr:hover,
+.brcc-sales-summary-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Date filter styles */
+.brcc-date-filter,
+.brcc-date-range-filter {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.brcc-date-filter label,
+.brcc-date-range-filter label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.brcc-datepicker {
+    padding: 6px 10px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+/* Dashboard header and footer */
+.brcc-dashboard-header,
+.brcc-dashboard-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.brcc-dashboard-footer p {
+    margin: 0;
+    color: #555;
+}
+
+/* Export buttons */
+.brcc-export-buttons {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 15px;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.brcc-export-buttons .description {
+    margin-left: 15px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Daily sales cards */
+.brcc-daily-sales-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.brcc-daily-sales-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    color: #23282d;
+}
+
+/* Chart styles */
+.brcc-chart-widget {
+    width: 100%;
+    flex-basis: 100%;
+}
+
+.brcc-chart-container {
+    position: relative;
+    height: 400px;
+    margin-bottom: 20px;
+}
+
+.brcc-chart-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e5e5e5;
+}
+
+.brcc-chart-controls label {
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.brcc-chart-controls select {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+}
+
+/* Modal styles */
+#brcc-date-mappings-modal {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.brcc-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.brcc-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.brcc-modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #23282d;
+}
+
+.brcc-modal-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.brcc-modal-close:hover {
+    color: #000;
+}
+
+.brcc-modal-body {
+    margin-bottom: 20px;
+}
+
+.brcc-modal-footer {
+    margin-top: 25px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.brcc-modal-footer button {
+    margin-left: 10px;
+}
+
+/* Test result styles */
+.brcc-date-test-result {
+    margin-top: 8px;
+    display: none;
+    padding: 8px 12px;
+    background-color: #f0f6fc;
+    border-left: 4px solid #72aee6;
+    color: #334155;
+    font-size: 13px;
+}
+
+/* Status badges */
+.brcc-test-mode-badge {
+    background-color: #f0c33c;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.brcc-live-mode-badge {
+    background-color: #46b450;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+/* Tooltip styles */
+.brcc-help-tip {
+    color: #666;
+    cursor: help;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.brcc-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.brcc-tooltip .dashicons {
+    color: #72aee6;
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.brcc-tooltip .brcc-tooltip-text {
+    visibility: hidden;
+    width: 220px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px 12px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -110px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: normal;
+}
+
+.brcc-tooltip .brcc-tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.brcc-tooltip:hover .brcc-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Section connector */
+.brcc-section-connector {
+    margin: 25px 0;
+    padding: 10px 15px;
+    background-color: #f7f7f7;
+    border-left: 4px solid #2271b1;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Settings page */
+#brcc-mapping-result {
+    margin: 15px 0;
+}
+
+/* Square catalog container */
+#brcc-square-catalog-container {
+    margin-top: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+}
+
+#brcc-square-catalog-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#brcc-square-catalog-items code {
+    background: #f7f7f7;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+.brcc-test-square-mapping {
+    margin-left: 5px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 782px) {
+    .brcc-date-filter,
+    .brcc-date-range-filter,
+    .brcc-chart-controls,
+    .brcc-export-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .brcc-date-filter label,
+    .brcc-date-range-filter label,
+    .brcc-chart-controls label {
+        margin-bottom: 8px;
+    }
+
+    .brcc-datepicker,
+    .brcc-chart-controls select {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .brcc-dashboard-footer {
+        flex-direction: column;
+    }
+
+    .brcc-dashboard-footer p {
+        margin-bottom: 10px;
+    }
+    
+    .brcc-export-buttons button,
+    .brcc-export-buttons a.button {
+        margin-bottom: 10px;
+    }
+}

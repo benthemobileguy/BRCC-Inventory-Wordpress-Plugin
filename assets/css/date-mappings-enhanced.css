@@ -1,0 +1,445 @@
+/**
+ * BRCC Date Mappings CSS
+ */
+
+/* Modal Styles */
+#brcc-date-mappings-modal {
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.brcc-modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 90%; 
+    max-width: 1200px; 
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    overflow-x: auto;
+}
+
+.brcc-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.brcc-modal-header h2 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #23282d;
+}
+
+.brcc-modal-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #666;
+}
+
+.brcc-modal-close:hover {
+    color: #000;
+}
+
+.brcc-modal-body {
+    margin-bottom: 20px;
+}
+
+.brcc-modal-footer {
+    margin-top: 25px;
+    text-align: right;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.brcc-modal-footer button {
+    margin-left: 10px;
+}
+
+/* Table layout and column definitions */
+#brcc-dates-table {
+    table-layout: fixed; 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Define column widths */
+#brcc-dates-table th:nth-child(1), 
+#brcc-dates-table td:nth-child(1) { 
+    width: 15%; 
+}
+
+#brcc-dates-table th:nth-child(2), 
+#brcc-dates-table td:nth-child(2) { 
+    width: 15%;
+    text-align: center;
+}
+
+#brcc-dates-table th:nth-child(3), 
+#brcc-dates-table td:nth-child(3) { 
+    width: 8%; 
+}
+
+#brcc-dates-table th:nth-child(4), 
+#brcc-dates-table td:nth-child(4) { 
+    width: 25%; 
+}
+
+#brcc-dates-table th:nth-child(5), 
+#brcc-dates-table td:nth-child(5) { 
+    width: 25%; 
+}
+
+#brcc-dates-table th:nth-child(6), 
+#brcc-dates-table td:nth-child(6) { 
+    width: 12%; 
+}
+
+/* Ensure inputs respect their container width */
+#brcc-dates-table input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Table styling */
+#brcc-dates-table th {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#brcc-dates-table td {
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+#brcc-dates-table tr:nth-child(even):not([data-same-date="true"]) {
+    background-color: #f9f9f9;
+}
+
+#brcc-dates-table tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Status styles */
+.brcc-date-test-result {
+    margin-top: 8px;
+    display: none;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.brcc-date-test-result.status-success {
+    background-color: #f0fff4;
+    border-left: 4px solid #46b450;
+    color: #2c5e2e;
+}
+
+.brcc-date-test-result.status-warning {
+    background-color: #fef8ee;
+    border-left: 4px solid #ffb900;
+    color: #8a6d3b;
+}
+
+.brcc-date-test-result.status-error {
+    background-color: #fef7f7;
+    border-left: 4px solid #dc3232;
+    color: #a94442;
+}
+
+.brcc-date-test-result.status-info {
+    background-color: #f0f6fc;
+    border-left: 4px solid #72aee6;
+    color: #334155;
+}
+
+/* Eventbrite connection status styles */
+#brcc-eventbrite-status {
+    margin: 15px 0;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
+
+.brcc-connection-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.brcc-connection-status.connected {
+    background-color: #46b450;
+    color: white;
+}
+ 
+.brcc-connection-status.suggested {
+    background-color: #ffb900;
+    color: #333;
+}
+ 
+/* Row highlighting */
+tr.brcc-eventbrite-connected {
+    background-color: #f0fff4 !important;
+}
+ 
+tr.brcc-eventbrite-connected:hover {
+    background-color: #e0f5e9 !important;
+}
+ 
+tr.brcc-eventbrite-suggested {
+    background-color: #fef8ee !important;
+}
+ 
+tr.brcc-eventbrite-suggested:hover {
+    background-color: #fef0d9 !important;
+}
+ 
+tr.brcc-day-match {
+    font-weight: 500;
+}
+
+tr[data-same-date="true"] {
+    background-color: #fcfcfc;
+    border-top: none;
+}
+
+tr[data-same-date="true"] td:first-child {
+    color: #444; /* Keep color or adjust if needed */
+    padding-left: 20px; /* Re-added padding for the icon */
+    position: relative;
+    font-weight: 500; /* Changed from normal to match original row */
+}
+
+/* Added ::before rule for a subtle indicator icon */
+tr[data-same-date="true"] td:first-child::before {
+    content: "↳"; /* Corner arrow icon */
+    position: absolute;
+    left: 8px; /* Position icon */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    color: #888; /* Subtle grey color */
+    font-size: 12px;
+    font-weight: normal; /* Ensure icon is not bold */
+}
+
+/* Removed ::before rule that added the bullet icon */
+/*
+tr[data-same-date="true"] td:first-child::before {
+    content: "•";
+    color: #72aee6;
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    font-size: 12px;
+}
+*/
+
+/* Make sure the same date cells have proper borders */
+tr[data-same-date="true"] td {
+    border-top-color: #f0f0f0;
+}
+
+/* Date separator styling */
+tr.brcc-date-separator td {
+    padding: 0 !important;
+    border: none !important;
+    height: 10px;
+    background-color: transparent !important;
+}
+
+/* Eventbrite details tooltip */
+.brcc-eventbrite-details {
+    position: absolute;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 12px 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+    width: 250px;
+    display: none;
+}
+ 
+.brcc-eventbrite-details p {
+    margin: 5px 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* Auto-match button styling */
+#brcc-auto-match {
+    margin-left: 10px;
+    background-color: #72aee6 !important;
+    border-color: #5093d3 !important;
+    color: white !important;
+}
+
+#brcc-auto-match:hover {
+    background-color: #5093d3 !important;
+    border-color: #3f7dba !important;
+}
+ 
+#brcc-fetch-from-eventbrite {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+ 
+#brcc-fetch-from-eventbrite .dashicons {
+    margin-right: 5px;
+}
+ 
+#brcc-dates-loading {
+    padding: 20px;
+    text-align: center;
+    color: #666;
+}
+ 
+/* Time selector styling */
+.brcc-time-selector {
+    width: 100%;
+    max-width: 120px;
+    padding: 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+ 
+.brcc-time-value {
+    width: 100%;
+    max-width: 120px;
+}
+
+/* Add Time button styling */
+.brcc-add-time-slot {
+    margin-right: 5px;
+    background-color: #f0f6fc !important;
+    border-color: #72aee6 !important;
+    color: #334155 !important;
+}
+ 
+.brcc-add-time-slot:hover {
+    background-color: #e0f0ff !important;
+}
+
+.brcc-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.brcc-test-date-mapping, 
+.brcc-add-time-slot {
+    margin: 2px;
+    white-space: nowrap;
+}
+
+/* Date group styling */
+.brcc-date-group {
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.brcc-date-group-header {
+    background-color: #f8f8f8;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+}
+
+/* Controls container */
+.brcc-controls-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.brcc-controls-container .brcc-control-group {
+    margin-right: 15px;
+}
+
+.brcc-controls-container label {
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+/* Status indicator in table */
+.brcc-status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.brcc-status-indicator.connected {
+    background-color: #46b450;
+}
+
+.brcc-status-indicator.suggested {
+    background-color: #ffb900;
+}
+
+.brcc-status-indicator.error {
+    background-color: #dc3232;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 782px) {
+    .brcc-modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 15px;
+    }
+    
+    #brcc-dates-table th,
+    #brcc-dates-table td {
+        padding: 8px 5px;
+    }
+    
+    .brcc-date-test-result {
+        font-size: 12px;
+        padding: 8px;
+    }
+    
+    .brcc-add-time-slot {
+        margin-top: 5px;
+        margin-left: 0;
+        display: block;
+    }
+    
+    #brcc-dates-table {
+        table-layout: auto; 
+    }
+    
+    .brcc-controls-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .brcc-controls-container .brcc-control-group {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
